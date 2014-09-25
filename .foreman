@@ -1,2 +1,2 @@
-concurrency: web=1,reload=1
+concurrency: web=1
 procfile: Procfile.dev
