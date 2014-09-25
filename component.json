@@ -1,0 +1,15 @@
+{
+  "repo": "hypergroup/hyper-todo-ui",
+  "name": "hyper-todo-ui",
+  "description": "A simple todo example of hyper+json",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "poegroup/poe-ui": "^0.4.4",
+    "camshaft/component-angular": "^1.2.8",
+    "camshaft/component-angular-route": "^1.2.8",
+    "shoelace-ui/aglet": "master"
+  },
+  "development": {},
+  "license": "MIT"
+}

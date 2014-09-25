@@ -1,0 +1,6 @@
+div(data-hyper="user.account")
+  img.avatar(data-ng-if="account.avatar", data-hyper-img="account.avatar")
+  span.link(data-hyper-bind="account.username")
+  a.link(data-hyper-translate=".translations.todos", data-hyper-link="/users/:user")
+  a.link(data-hyper-translate=".translations.edit-account", data-hyper-link="/users/:user/edit")
+  a.link(data-hyper-translate=".translations.logout", href="/")

@@ -1,0 +1,33 @@
+section#todoapp(data-hyper=".translations as t")
+  header#header(data-hyper="user.account")
+    h1(data-hyper-translate="t.todo-title <- account.given-name as givenName, account.family-name as familyName")
+    form(data-hyper-form="user.items.create")
+      input#new-todo(data-ng-model="inputs.title.$model", data-hyper-translate="placeholder -> t.cta", autofocus)
+  section#main
+    // | TODO Mark all as complete
+    // input()
+    ul#todo-list
+      li(data-ng-repeat="item in items", data-hyper="item as i", data-ng-class="{'completed': !!i.completed, editing: i.editing}")
+        .view
+          form(data-hyper-form="item.complete")
+            input(type="checkbox", class="toggle", data-ng-checked="!!i.completed", data-ng-click="submit()")
+          form(data-hyper-form="item.undo-complete")
+            input(type="checkbox", class="toggle", data-ng-checked="!!i.completed", data-ng-click="submit()")
+
+          label(data-hyper-bind="i.title", data-ng-dblclick="i.editing = true; $root.editingItem = i")
+
+          form(data-hyper-form="i.delete")
+            button.destroy(data-ng-click="submit()")
+
+        form(data-ng-if="i.editing", data-hyper-form="i.update")
+          input.edit(data-ng-model="inputs.title.$model")
+
+  footer#footer
+    span#todo-count(data-hyper-translate="t.count <- user.items.active.count as smart_count")
+    ul#filters
+      li
+        a(data-hyper-link="/users/:user", data-hyper-translate="t.all")
+      li
+        a(data-hyper-link="/users/:user/active", data-hyper-translate="t.active")
+      li
+        a(data-hyper-link="/users/:user/completed", data-hyper-translate="t.completed")

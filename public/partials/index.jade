@@ -1,0 +1,15 @@
+form(data-hyper-form=".login")
+  span(data-ng-if="hyperFormResponse", data-hyper-redirect="/users/:hyperFormResponse")
+  legend(data-hyper-translate=".translations.login")
+  div(data-ng-repeat="input in inputs")
+    input(data-hyper-input="input")
+  input(type="submit", data-hyper-translate="value -> .translations.login")
+
+hr
+
+form(data-hyper-form=".signup")
+  span(data-ng-if="hyperFormResponse", data-hyper-redirect="/users/:hyperFormResponse")
+  legend(data-hyper-translate=".translations.signup")
+  div(data-ng-repeat="input in inputs")
+    input(data-hyper-input="input")
+  input(type="submit", data-hyper-translate="value -> .translations.signup")

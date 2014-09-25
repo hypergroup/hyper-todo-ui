@@ -1,0 +1,29 @@
+{
+  "name": "hyper-todo-ui",
+  "version": "0.0.0",
+  "description": "A simple todo example of hyper+json",
+  "author": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "./node_modules/.bin/startup start",
+    "test": "NODE_ENV=test ./node_modules/.bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hypergroup/hyper-todo-ui"
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.x.x"
+  },
+  "dependencies": {
+    "poe-ui": "^0.4.4",
+    "startup": "^0.3.0",
+    "envs": "^0.1.4"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*",
+    "lr": "*"
+  }
+}

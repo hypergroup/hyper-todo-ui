@@ -1,0 +1,8 @@
+form(data-hyper-form="user.account.update")
+  div(data-ng-repeat="input in inputs")
+    input(data-hyper-input="input")
+
+  input(type="submit", data-hyper-translate="value -> .translations.update-account")
+
+form(data-hyper-form="user.account.delete")
+  input(type="submit", data-hyper-translate="value -> .translations.delete-account")
